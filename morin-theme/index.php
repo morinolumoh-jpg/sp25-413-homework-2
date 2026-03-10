@@ -2,7 +2,7 @@
 
 <main class="container">
 
-    <!-- HOMEPAGE HERO -->
+    <!-- HOMEPAGE -->
     <section id="homepage" class="section-hero">
         <h1>Welcome to Morin Metro News</h1>
         <p>Your daily source for positive mindset and personal growth articles.</p>
