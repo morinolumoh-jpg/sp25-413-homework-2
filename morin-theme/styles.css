@@ -1,0 +1,65 @@
+/*
+Theme Name: Morin Metro Theme
+Author: Omorinsola Olumoh
+Version: 1.0
+Description: A custom newspaper-style WordPress theme focused on positive mindset stories and motivational news.
+*/
+
+/* General page styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333333;
+}
+
+/* Header styling */
+header {
+    background-color: #222222;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigation bar */
+nav {
+    background-color: #444444;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Navigation links */
+nav a {
+    color: #ffffff;
+    margin-right: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Navigation hover effect */
+nav a:hover {
+    color: #ffcc00;
+}
+
+/* Main content area */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Article styling */
+article {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #222222;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+}
