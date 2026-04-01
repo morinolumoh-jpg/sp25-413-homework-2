@@ -2,61 +2,70 @@
 Theme Name: Morin Metro Theme
 Author: Omorinsola Olumoh
 Version: 1.0
-Description: A custom newspaper-style WordPress theme focused on positive mindset stories and motivational news.
+Description: A custom newspaper-style WordPress theme.
 */
+
+/* Reset & Base */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 /* General page styling */
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333333;
+    margin:0 auto;
+    padding: 0;
+    background-color: #d6caca;
 }
 
 /* Header styling */
 header {
-    background-color: #222222;
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
+    margin-top : 10px;
+    font-size: 20px;
+    font-weight: 700;
 }
 
-/* Navigation bar */
-nav {
+/* section labels (Title, Author, Menu*/
+section {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: darkblue;
+    letter-spacing: 2px;
     background-color: #444444;
-    padding: 10px;
-    text-align: center;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
 }
 
-/* Navigation links */
-nav a {
-    color: #ffffff;
-    margin-right: 15px;
-    text-decoration: none;
-    font-weight: bold;
+.section-title{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: 1000px;
+    color:red;
+
 }
 
-/* Navigation hover effect */
-nav a:hover {
-    color: #ffcc00;
+.section-description{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+    font-weight: 700px;
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 1px;
 }
 
-/* Main content area */
-.container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px;
+.section-author{
+    font-style: italic;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    background-color: pink;
+    
 }
 
-/* Article styling */
-article {
-    background-color: #ffffff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
 
-/* Footer styling */
+/*Footer styling */
 footer {
     background-color: #222222;
     color: #ffffff;
