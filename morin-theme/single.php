@@ -10,7 +10,7 @@
 
             <h1><?php the_title(); ?></h1>
 
-            <p class="post-meta">
+            <p class="section">
                 By <?php the_author(); ?> | <?php echo get_the_date(); ?>
             </p>
 
