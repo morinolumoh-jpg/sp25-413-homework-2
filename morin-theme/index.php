@@ -1,4 +1,12 @@
+/*
+Theme Name: Morin Metro Theme
+Author: Omorinsola Olumoh
+Version: 1.0
+Description: An index file for the wordpress theme.
+*/
+
 <?php get_header(); ?>
+
 
 <main class="container">
 
@@ -17,7 +25,7 @@
     <!-- ABOUT ME -->
     <section id="about-me" class="section-about">
         <h2>About Me</h2>
-        <p>Hello! I’m Omorinsola Olumoh, editor of Morin Metro News. I create content that inspires and motivates readers to achieve a positive mindset.</p>
+        '<p>' Hello! I’m Omorinsola Olumoh, editor of Morin Metro News. I create content that inspires and motivates readers to become positive.'</p>'
     </section>
 
     <!-- LATEST POSTS -->
@@ -28,16 +36,23 @@
             <?php while ( have_posts() ) : the_post(); ?>
                 <article class="post-card">
                     <?php if ( has_post_thumbnail() ) : ?>
-                        <div class="post-image">
+                        <div class="post-card">
                             <a href="<?php the_permalink(); ?>">
-                                <?php the_post_thumbnail('medium'); ?>
+                                <?php the_post_thumbnail('medium', array('style' => 'background-color: #White;')); ?>
                             </a>
                         </div>
+                    
+                          
+                            </article>
+                        <article class="post-click">
+                            <a href="<?php the_permalink(); ?>">Read More</a>
+                        </article>
                     <?php endif; ?>
 
-                    <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                    <p class="section"><?php the_date(); ?> | by <?php the_author(); ?></p>
+                    <h3><a href="<?php the_permalink(); ?>"><?php the_title('font-family: NYT Modern;'); ?></a></h3>
+                    <p class="post-meta"><?php the_date(); ?> | by <?php the_author(); ?></p>
                     <div class="excerpt"><?php the_excerpt(); ?></div>
+
                 </article>
             <?php endwhile; ?>
         <?php else : ?>
