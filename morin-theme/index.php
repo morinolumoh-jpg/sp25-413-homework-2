@@ -1,51 +1,79 @@
-/*
-Theme Name: Morin Metro Theme
-Author: Omorinsola Olumoh
-Version: 1.0
-Description: A page customization for the wordpress theme.
-*/
+
+
 <?php get_header(); ?>
 
+<head>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php wp_head(); ?>
+</head>
 
 <main class="container">
 
-<?php if (have_posts()) : ?>
 
-    <?php while (have_posts()) : the_post(); ?>
+    <!-- HOMEPAGE -->
+    <section id="homepage" class="section-hero">
+      
 
-        <article>
+ 
+              <h1 style="text-align: center;">Morin Metro News </h1>
+    
+        
+         <p style='text-align: center;'>Your daily source for positive mindset and personal growth articles.</p>
+    </section>
 
-            <h1><?php the_title(); ?>
-            <p> Trending Posts of the Week </p>33
-            </h1>
 
-            <div class="page-content">
-                <?php the_content(); ?>
-            </div>
 
-            <div class="post-title">
-            <?php the_title("font-family: NYT Modern"); ?>
 
-        </div>
+    <!-- INTRODUCTIONS -->
+    <section id="introductions" class="section-intro">
+        <h2>Introductions</h2>
+        <p style="font-style: italic;">We share stories, tips, and insights to teach readers beyond the headlines. </p>
+    </section>
 
-            <div class="img-card">
-              <?php the_post_thumbnail('background_color(): #782345'); ?>
+    <!-- ABOUT ME -->
+    <section id="about-me" class="section-about">
+        <h2>About Me</h2>
+        <p> Hello! I’m Omorinsola Olumoh, editor of Morin Metro News. I create content trending around the globe.</p>
+    </section>
 
-            </div>
+    <!-- Page Image -->
+    <section id="post-image">
+        <img src="<?php echo get_template_directory_uri(); ?>/myimages/mylogo.png" alt="Morin Metro News Logo;", class="post-image">
+    </section>
+    
+    <!-- LATEST POSTS -->
+    <section id="latest-posts" class="section-posts">
+        <h2>Latest Articles</h2>
 
-            <div class="post-click"
-            <a href="<?php the_permalink(); ?>">Read More</a>
-            </div>
+        <?php if ( have_posts() ) : ?>
+            <?php while ( have_posts() ) : the_post(); ?>
+                <article class="post-card">
+                    <?php if ( has_post_thumbnail() ) : ?>
+                        <div class="post-img">
+                            <a href="<?php the_permalink(); ?>">
+                                <?php the_post_thumbnail(); ?>
+                            </a>
+                        </div>
+                    
+                          
+                            </article>
+                        <article class="post-click">
+                            <a href="<?php the_permalink(); ?>">Read More</a>
+                        </article>
+                    <?php endif; ?>
 
-        </article>
+                    <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                    <p class="post-meta"><?php the_date(); ?> | by <?php the_author(); ?></p>
+                    <div class="excerpt"><?php the_excerpt(); ?></div>
 
-    <?php endwhile; ?>
+                </article>
+            <?php endwhile; ?>
+        <?php else : ?>
+            <p>No posts found.</p>
+        <?php endif; ?>
 
-<?php else : ?>
-
-    <p>No page content found.</p>
-
-<?php endif; ?>
+    </section>
 
 </main>
 
