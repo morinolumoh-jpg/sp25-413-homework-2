@@ -64,7 +64,7 @@
                     <?php endif; ?>
 
                     <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                    <p class="post-meta"><?php the_date(); ?> | by <?php the_author(); ?></p>
+                    <p class="post-meta"><?php the_date(); ?> | by <?php the_author(font-style); ?></p>
                     <div class="excerpt"><?php the_excerpt(); ?></div>
 
                 </article>
